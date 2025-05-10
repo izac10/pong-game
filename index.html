@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Ping Pong Game</title>
+  </head>
+  <body>
+    <span class="score player1Score" id="player1Score">0</span>
+    <span class="score player2Score" id="player2Score">0</span>
+    <h3 class="startText" id="startText">Press any key to start the game</h3>
+    <div class="restart" id="restart">
+      <img src="./assets/restart_game.png" alt="Restart Game" class="icon" id="icon" onclick="restartGame()">
+      <h1 class="restartText">Restart Game</h1>
+    </div>
+    <div class="paragraph_container">
+      <p> 
+        &emsp; Instructions:<br> <br><br>
+        &emsp; > Player 1 (left paddle): <br> <br>
+        &emsp; &emsp; &emsp; &emsp; Press <kbd>w</kbd> to move up <br> <br>
+        &emsp; &emsp; &emsp; &emsp; Press <kbd>s</kbd> to move down <br> <br>
+        &emsp; > Player 2 (right paddle):&emsp; <br> <br>
+        &emsp; &emsp; &emsp; &emsp; Press <kbd>&uarr;</kbd> to move up <br> <br>
+        &emsp; &emsp; &emsp; &emsp; Press <kbd>&darr;</kbd> to move down <br> 
+      </p>
+    </div>
+    <div class="gameArea">
+        <div id="paddle1" class="paddle1 paddle"></div>
+        <div id="paddle2" class="paddle2 paddle"></div>
+        <div id="ball" class="ball"></div>
+        <div class="net"></div>
+    </div>
+    <img src="/assets/MachineNeon.png" alt="Aracade Pong Machine" class="bg"/>
+    <div class="vignett"></div>
+    <audio src="/assets/paddle.wav" id="paddleSound"></audio>
+    <audio src="/assets/wall.wav" id="wallSound"></audio>
+    <audio src="/assets/loss.wav" id="lossSound"></audio>
+  </body>
+</html>
+
